@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct SubmittedChatMessage: Decodable {
+struct SubmittedChatMessage: Encodable {
     let message: String
 }
 
-struct ReceivingChatMessage: Encodable, Identifiable {
-    let date = Date()
-    let id = UUID()
+struct ReceivingChatMessage: Decodable, Identifiable {
+    let date: Date
+    let id: UUID
     let message: String
 }

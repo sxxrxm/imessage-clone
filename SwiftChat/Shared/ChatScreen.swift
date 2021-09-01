@@ -23,7 +23,11 @@ struct ChatScreen: View{
         VStack{
             //Chat history.
             ScrollView{
-                
+                LazyVStack(spacing: 8){
+                    ForEach(model.messages){ message in
+                        Text(message.message)
+                    }
+                }
             }.onAppear(perform:
                 onAppear
             ).onDisappear(perform: onDisappear)
@@ -31,18 +35,21 @@ struct ChatScreen: View{
             //you can just use .onAppear(model.connect) too but this way is easier to find
             
             HStack{
-                TextField("Message", text: $message)
-                    .padding(10)
-                    .background(Color.secondary.opacity(0.2))
-                    .cornerRadius(5)
+                TextField("Message", text: $message, onEditingChanged:{ _ in },
+                          onCommit: onCommit)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                    Image(systemName: "arrowshape.turn.up.right").font(.system(size: 20))
+                Button(action: onCommit){
+                    
                 }
-            .padding()
-            .disabled(message.isEmpty)
             }
             .padding()
+        }
+    }
+    
+    private func onCommit(){
+        if !message.isEmpty{
+            model.send(text: message)
+            message = ""
         }
     }
 
