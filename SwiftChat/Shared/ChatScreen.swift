@@ -15,14 +15,20 @@ struct ChatScreen: View{
         model.connect()
     }
     
+    private func onDisappear(){
+        model.disconnect()
+    }
+    
     var body: some View{
         VStack{
             //Chat history.
             ScrollView{
                 
-            }.onAppear(perform: {
-                onAppear()
-            })
+            }.onAppear(perform:
+                onAppear
+            ).onDisappear(perform: onDisappear)
+            
+            //you can just use .onAppear(model.connect) too but this way is easier to find
             
             HStack{
                 TextField("Message", text: $message)
