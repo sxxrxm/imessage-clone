@@ -23,10 +23,14 @@ struct ChatScreen: View{
                     .background(Color.secondary.opacity(0.2))
                     .cornerRadius(5)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                })
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                    Image(systemName: "arrowshape.turn.up.right").font(.system(size: 20))
+                }
+            .padding()
+            .disabled(message.isEmpty)
             }
+            .padding()
         }
     }
+
 }
