@@ -23,10 +23,15 @@ struct ChatScreen: View{
         VStack{
             //Chat history.
             ScrollView{
+                ScrollViewReader{ proxy in
                 LazyVStack(spacing: 8){
                     ForEach(model.messages){ message in
-                        Text(message.message)
+                        Text(message.message).id(message.id)
                     }
+                }
+                .onChange(of: model.messages.count){ _ in
+                    scrollToLastMessage(proxy: proxy)
+                }
                 }
             }.onAppear(perform:
                 onAppear
@@ -50,6 +55,14 @@ struct ChatScreen: View{
         if !message.isEmpty{
             model.send(text: message)
             message = ""
+        }
+    }
+    
+    private func scrollToLastMessage(proxy: ScrollViewProxy){
+        if let lastMessage = model.messages.last {
+            withAnimation( .easeOut(duration: 0.4)){
+                proxy.scrollTo(lastMessage.id, anchor: .bottom)
+            }
         }
     }
 
