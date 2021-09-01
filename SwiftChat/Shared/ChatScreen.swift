@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatScreen: View{
+    @StateObject private var model = ChatScreenModel()
     @State private var message = ""
     
     var body: some View{
