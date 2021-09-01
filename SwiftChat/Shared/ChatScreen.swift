@@ -11,12 +11,18 @@ struct ChatScreen: View{
     @StateObject private var model = ChatScreenModel()
     @State private var message = ""
     
+    private func onAppear(){
+        model.connect()
+    }
+    
     var body: some View{
         VStack{
             //Chat history.
             ScrollView{
                 
-            }
+            }.onAppear(perform: {
+                onAppear()
+            })
             
             HStack{
                 TextField("Message", text: $message)
