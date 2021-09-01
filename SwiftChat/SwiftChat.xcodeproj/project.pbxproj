@@ -17,6 +17,8 @@
 		4D0D170526D8C6AA00A97229 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0D170326D8C6AA00A97229 /* ChatScreen.swift */; };
 		4D0E7BE726DF049900FFDEB6 /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */; };
 		4D0E7BE826DF049900FFDEB6 /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */; };
+		4D0E7BEA26DF2A8900FFDEB6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE926DF2A8900FFDEB6 /* Models.swift */; };
+		4D0E7BEB26DF2A8900FFDEB6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE926DF2A8900FFDEB6 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		4D0D16F426D8C68800A97229 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4D0D170326D8C6AA00A97229 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenModel.swift; sourceTree = "<group>"; };
+		4D0E7BE926DF2A8900FFDEB6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				4D0D16E226D8C68200A97229 /* SwiftChatApp.swift */,
 				4D0D170326D8C6AA00A97229 /* ChatScreen.swift */,
 				4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */,
+				4D0E7BE926DF2A8900FFDEB6 /* Models.swift */,
 				4D0D16E326D8C68200A97229 /* ContentView.swift */,
 				4D0D16E426D8C68800A97229 /* Assets.xcassets */,
 			);
@@ -199,6 +203,7 @@
 				4D0E7BE726DF049900FFDEB6 /* ChatScreenModel.swift in Sources */,
 				4D0D170426D8C6AA00A97229 /* ChatScreen.swift in Sources */,
 				4D0D16F526D8C68800A97229 /* SwiftChatApp.swift in Sources */,
+				4D0E7BEA26DF2A8900FFDEB6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +215,7 @@
 				4D0E7BE826DF049900FFDEB6 /* ChatScreenModel.swift in Sources */,
 				4D0D170526D8C6AA00A97229 /* ChatScreen.swift in Sources */,
 				4D0D16F626D8C68800A97229 /* SwiftChatApp.swift in Sources */,
+				4D0E7BEB26DF2A8900FFDEB6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
