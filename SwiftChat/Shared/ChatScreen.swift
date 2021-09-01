@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ChatScreen: View{
+    @EnvironmentObject private var userInfo: UserInfo
     @StateObject private var model = ChatScreenModel()
     @State private var message = ""
     
     private func onAppear(){
-        model.connect()
+        model.connect(username: userInfo.username, userID: userInfo.userID)
     }
     
     private func onDisappear(){
@@ -26,7 +27,8 @@ struct ChatScreen: View{
                 ScrollViewReader{ proxy in
                 LazyVStack(spacing: 8){
                     ForEach(model.messages){ message in
-                        Text(message.message).id(message.id)
+                        ChatMessageRow(message: message, isUser: message.userID == userInfo.userID)
+                            .id(message.id)
                     }
                 }
                 .onChange(of: model.messages.count){ _ in
@@ -48,6 +50,44 @@ struct ChatScreen: View{
                 }
             }
             .padding()
+        }
+    }
+    
+    struct ChatMessageRow: View {
+        static private let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .none
+            formatter.timeStyle = .short
+            return formatter
+        }()
+        
+        let message: ReceivingChatMessage
+        let isUser: Bool
+        
+        var body: some View{
+            HStack{
+                if isUser{
+                    Spacer()
+                }
+                
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack{
+                        Text(message.user).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).font(.system(size: 12))
+                        
+                        Text(Self.dateFormatter.string(from: message.date)).font(.system(size: 10)).opacity(0.7)
+                    }
+                    Text(message.message)
+                }
+                .foregroundColor(isUser ? .white : .black)
+                .padding(10)
+                .background(isUser ? Color.blue : Color(white: 0.95))
+                .cornerRadius(5)
+                .padding(.leading, 20)
+                
+                if !isUser{
+                    Spacer()
+                }
+            }.padding( .trailing, 20)
         }
     }
     

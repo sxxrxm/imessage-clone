@@ -19,6 +19,10 @@
 		4D0E7BE826DF049900FFDEB6 /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */; };
 		4D0E7BEA26DF2A8900FFDEB6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE926DF2A8900FFDEB6 /* Models.swift */; };
 		4D0E7BEB26DF2A8900FFDEB6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BE926DF2A8900FFDEB6 /* Models.swift */; };
+		4D0E7BED26DF51CE00FFDEB6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BEC26DF51CE00FFDEB6 /* UserInfo.swift */; };
+		4D0E7BEE26DF51CE00FFDEB6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BEC26DF51CE00FFDEB6 /* UserInfo.swift */; };
+		4D0E7BF026DF537400FFDEB6 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BEF26DF537400FFDEB6 /* SettingsScreen.swift */; };
+		4D0E7BF126DF537400FFDEB6 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E7BEF26DF537400FFDEB6 /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,8 @@
 		4D0D170326D8C6AA00A97229 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenModel.swift; sourceTree = "<group>"; };
 		4D0E7BE926DF2A8900FFDEB6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4D0E7BEC26DF51CE00FFDEB6 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		4D0E7BEF26DF537400FFDEB6 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,9 @@
 			children = (
 				4D0D16E226D8C68200A97229 /* SwiftChatApp.swift */,
 				4D0D170326D8C6AA00A97229 /* ChatScreen.swift */,
+				4D0E7BEF26DF537400FFDEB6 /* SettingsScreen.swift */,
 				4D0E7BE626DF049900FFDEB6 /* ChatScreenModel.swift */,
+				4D0E7BEC26DF51CE00FFDEB6 /* UserInfo.swift */,
 				4D0E7BE926DF2A8900FFDEB6 /* Models.swift */,
 				4D0D16E326D8C68200A97229 /* ContentView.swift */,
 				4D0D16E426D8C68800A97229 /* Assets.xcassets */,
@@ -200,9 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0D16F726D8C68800A97229 /* ContentView.swift in Sources */,
+				4D0E7BF026DF537400FFDEB6 /* SettingsScreen.swift in Sources */,
 				4D0E7BE726DF049900FFDEB6 /* ChatScreenModel.swift in Sources */,
 				4D0D170426D8C6AA00A97229 /* ChatScreen.swift in Sources */,
 				4D0D16F526D8C68800A97229 /* SwiftChatApp.swift in Sources */,
+				4D0E7BED26DF51CE00FFDEB6 /* UserInfo.swift in Sources */,
 				4D0E7BEA26DF2A8900FFDEB6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,9 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0D16F826D8C68800A97229 /* ContentView.swift in Sources */,
+				4D0E7BF126DF537400FFDEB6 /* SettingsScreen.swift in Sources */,
 				4D0E7BE826DF049900FFDEB6 /* ChatScreenModel.swift in Sources */,
 				4D0D170526D8C6AA00A97229 /* ChatScreen.swift in Sources */,
 				4D0D16F626D8C68800A97229 /* SwiftChatApp.swift in Sources */,
+				4D0E7BEE26DF51CE00FFDEB6 /* UserInfo.swift in Sources */,
 				4D0E7BEB26DF2A8900FFDEB6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

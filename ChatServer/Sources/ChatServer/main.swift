@@ -24,7 +24,9 @@ app.webSocket("chat"){ req, client in
                   }
                   
                   let incomingMessage = try JSONDecoder().decode(SubmittedChatMessage.self, from: data)
-                  let  outgoingMessage = ReceivingChatMessage(message: incomingMessage.message)
+                  let outgoingMessage = ReceivingChatMessage(message: incomingMessage.message,
+                                                             user: incomingMessage.user,
+                                                             userID: incomingMessage.userID)
                   let json = try JSONEncoder().encode(outgoingMessage)
                   
                   guard let jsonString = String(data: json, encoding: .utf8) else{
